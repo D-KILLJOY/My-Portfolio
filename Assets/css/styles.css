@@ -25,6 +25,7 @@ body {
 	font-family: "Roboto", sans-serif;
 	background-color: var(--background-color);
 	transition: background-color 1s;
+	scroll-behavior: smooth;
 }
 
 .dark {
@@ -190,7 +191,7 @@ body {
 }
 
 .nav-menu {
-	position: absolute;
+	position: fixed;
 	right: -25rem;
 	display: flex;
 	flex-direction: column;
@@ -205,8 +206,10 @@ body {
 
 .nav-menu-active {
 	position: fixed;
+	top: 0;
 	right: 0;
 	transition: 1s;
+	padding: 6rem 0 0 0;
 }
 
 .nav-list {

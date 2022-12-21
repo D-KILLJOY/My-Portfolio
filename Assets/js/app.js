@@ -29,7 +29,7 @@ navItem.forEach((i) => {
 	});
 });
 
-// OPEN NAV MENU FOR MOBILE DISPLAY
+//  OPEN NAV MENU FOR MOBILE DISPLAY
 
 function active() {
 	let navActive = navMenu.classList.contains("nav-menu-active");
