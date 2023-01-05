@@ -729,6 +729,8 @@ footer a:hover {
 	}
 
 	.text a {
+		text-align: center;
+
 		display: inline-block;
 		margin: 2rem auto 4rem;
 		font-size: 1.4rem;
