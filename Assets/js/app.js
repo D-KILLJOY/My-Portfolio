@@ -16,33 +16,17 @@ if (selectedTheme) {
 
 navItem.forEach((i) => {
 	i.addEventListener("click", () => {
-		let navActive = navMenu.classList.contains("nav-menu-active");
-		let activeNav = navBtn.classList.contains("nav-btn-active");
-
-		if (activeNav && navActive) {
-			navBtn.classList.remove("nav-btn-active");
-			navMenu.classList.remove("nav-menu-active");
-		} else {
-			navBtn.classList.add("nav-btn-active");
-			navMenu.classList.add("nav-menu-active");
-		}
+		navBtn.classList.toggle("nav-btn-active");
+		navMenu.classList.toggle("nav-menu-active");
 	});
 });
 
 //  OPEN NAV MENU FOR MOBILE DISPLAY
 
-function active() {
-	let navActive = navMenu.classList.contains("nav-menu-active");
-	let activeNav = navBtn.classList.contains("nav-btn-active");
-
-	if (activeNav && navActive) {
-		navBtn.classList.remove("nav-btn-active");
-		navMenu.classList.remove("nav-menu-active");
-	} else {
-		navBtn.classList.add("nav-btn-active");
-		navMenu.classList.add("nav-menu-active");
-	}
-}
+navCon.addEventListener("click", () => {
+	navBtn.classList.toggle("nav-btn-active");
+	navMenu.classList.toggle("nav-menu-active");
+});
 
 // THEME TOGGLE
 function themeChange() {
@@ -60,4 +44,3 @@ function themeChange() {
 }
 
 theme.addEventListener("click", themeChange);
-navCon.addEventListener("click", active);

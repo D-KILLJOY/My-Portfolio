@@ -4,6 +4,9 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+html {
 	scroll-behavior: smooth;
 }
 
@@ -25,7 +28,6 @@ body {
 	font-family: "Roboto", sans-serif;
 	background-color: var(--background-color);
 	transition: background-color 1s;
-	scroll-behavior: smooth;
 }
 
 .dark {
@@ -372,7 +374,7 @@ main {
 	font-size: 1.2rem;
 	font-style: italic;
 	font-weight: 300;
-	margin: 1rem 0 0;
+	margin: 1rem auto 0;
 }
 
 .link-con {
@@ -519,6 +521,10 @@ footer {
 	background-color: var(--footer-background-color);
 	padding: 2rem 1rem;
 	font-family: "Courier New", Courier, monospace;
+}
+
+.footer-container {
+	margin: auto;
 }
 
 footer p {
@@ -719,12 +725,13 @@ footer a:hover {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+		margin: auto;
 	}
 
 	.project-tile {
 		width: 33rem;
 		height: 30rem;
-		margin-left: unset;
+		margin-left: auto;
 		padding: 2rem 2rem 3rem;
 	}
 
@@ -823,7 +830,8 @@ footer a:hover {
 	}
 	/* ! END OF CONTACT SECTION */
 	/* ! FOOTER  SECTION */
-	footer {
+	.footer-container {
+		max-width: 120rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -999,9 +1007,6 @@ footer a:hover {
 	}
 	/* ! END OF CONTACT SECTION */
 	/* ! FOOTER SECTION */
-	footer {
-		padding: 3rem 5rem 3rem 3rem;
-	}
 
 	.footer-socials {
 		gap: 3rem;
