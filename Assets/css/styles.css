@@ -730,7 +730,7 @@ footer a:hover {
 
 	.text a {
 		display: inline-block;
-		margin: 2rem auto 4rem 0;
+		margin: 2rem auto 4rem;
 		font-size: 1.4rem;
 	}
 
