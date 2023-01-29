@@ -1,4 +1,4 @@
-const body = document.querySelector("body");
+const body = document.body;
 const navCon = document.querySelector(".nav-btn-con");
 const navBtn = document.querySelector(".nav-btn");
 const theme = document.querySelector(".theme-toggle-con");
@@ -18,6 +18,8 @@ navItem.forEach((i) => {
 	i.addEventListener("click", () => {
 		navBtn.classList.toggle("nav-btn-active");
 		navMenu.classList.toggle("nav-menu-active");
+
+		body.classList.remove("no-scroll")
 	});
 });
 
@@ -26,6 +28,22 @@ navItem.forEach((i) => {
 navCon.addEventListener("click", () => {
 	navBtn.classList.toggle("nav-btn-active");
 	navMenu.classList.toggle("nav-menu-active");
+
+	body.classList.toggle("no-scroll")
+
+});
+
+
+// SCROLL LOCK 
+
+document.addEventListener("click", (e) => {
+	if (e.target.classList.contains("nv")) {
+		navMenu.classList.remove("nav-menu-active");
+			navBtn.classList.remove("nav-btn-active");
+
+		body.classList.remove("no-scroll");
+
+	}
 });
 
 // THEME TOGGLE
