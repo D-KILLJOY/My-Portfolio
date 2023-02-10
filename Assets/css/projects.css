@@ -3,6 +3,10 @@
 	max-width: 120rem;
 }
 
+.project-main .section-header {
+	margin-top: 0;
+}
+
 .project-container {
 	width: 100%;
 	display: flex;

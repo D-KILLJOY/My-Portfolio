@@ -213,8 +213,7 @@ body {
 	right: 0;
 	transition: 1s;
 	padding: 6rem 0 0 0;
-		width: 100%;
-
+	width: 100%;
 }
 
 .nav-list {
@@ -603,8 +602,8 @@ footer a:hover {
 	}
 
 	.no-scroll {
-	overflow: unset;
-}
+		overflow: unset;
+	}
 
 	.greeting {
 		font-size: 3rem;
