@@ -526,6 +526,7 @@ footer a:hover {
 		align-items: center;
 		padding: 0.5rem;
 		transition: unset;
+		transition: background-color 1s;
 	}
 
 	.logo {
