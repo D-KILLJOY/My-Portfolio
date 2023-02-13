@@ -35,6 +35,7 @@ body {
 	--primary-color: #d7e9fed4;
 	--secondary-color: #d7e9fe;
 	--background-color: #233554;
+	--background-color-trans: rgba(35, 52, 83, 0.144);
 	--footer-text-color: #024088;
 	--footer-background-color: #d9d2d2;
 	--svg-bg: #347ec4;
@@ -50,6 +51,7 @@ body {
 	--primary-color: #0961b5;
 	--secondary-color: #024088;
 	--background-color: #d9d2d2;
+	--background-color-trans: rgba(217, 210, 210, 0.144);
 	--footer-text-color: #d7e9fe;
 	--footer-background-color: #233554;
 	--svg-bg: #b6d5f5;
@@ -73,18 +75,18 @@ body {
 	background-color: var(--background-color);
 	z-index: 10;
 	transition: background-color 1s;
-	padding: 1rem;
-	z-index: 900;
 }
 
 .main-nav {
 	width: 100%;
 	max-width: 120rem;
-	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem;
+	padding: 2rem;
+	position: relative;
+	background-color: var(--background-color);
+	transition: background-color 1s;
 }
 
 .logo {
@@ -207,6 +209,7 @@ body {
 	height: 100%;
 	top: 0;
 	transition: 1s;
+	z-index: -999;
 }
 
 .nav-menu-active {
@@ -217,8 +220,7 @@ body {
 	padding: 6rem 0 0 0;
 	width: 100%;
 	z-index: -999;
-	background: rgba(255, 255, 255, 0.24);
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	background: var(--background-color-trans);
 	backdrop-filter: blur(10.5px);
 	-webkit-backdrop-filter: blur(10.5px);
 }
@@ -367,6 +369,7 @@ main {
 	background-color: var(--background-color);
 	text-align: left;
 	position: relative;
+	transition: background-color 1s;
 }
 
 .project-tile h2 {
@@ -374,6 +377,7 @@ main {
 	padding: 0 0 0 1rem;
 	color: var(--secondary-color);
 	background-color: var(--svg-bg);
+	transition: background-color 1s;
 }
 
 .project-tile p {
@@ -484,6 +488,7 @@ footer {
 	background-color: var(--footer-background-color);
 	padding: 2rem 1rem;
 	font-family: "Courier New", Courier, monospace;
+	transition: background-color 1s;
 }
 
 .footer-container {
