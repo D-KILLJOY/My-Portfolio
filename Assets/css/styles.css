@@ -74,6 +74,7 @@ body {
 	z-index: 10;
 	transition: background-color 1s;
 	padding: 1rem;
+	z-index: 900;
 }
 
 .main-nav {
@@ -156,6 +157,7 @@ body {
 
 .nav-menu {
 	position: relative;
+	z-index: -10;
 }
 
 .nav-list {
@@ -214,6 +216,11 @@ body {
 	transition: 1s;
 	padding: 6rem 0 0 0;
 	width: 100%;
+	z-index: -999;
+	background: rgba(255, 255, 255, 0.24);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10.5px);
+	-webkit-backdrop-filter: blur(10.5px);
 }
 
 .nav-list {
@@ -221,8 +228,8 @@ body {
 	text-align: center;
 	font-size: 1.7rem;
 	font-weight: 900;
-	width: 10rem;
-	margin: 1rem;
+	width: 15rem;
+	margin: 1.5rem 2rem;
 }
 
 .nav-link {
@@ -571,6 +578,14 @@ footer a:hover {
 		width: 70%;
 		height: unset;
 		top: 0;
+		border: none;
+	}
+
+	.nav-menu-active {
+		background: transparent;
+		box-shadow: none;
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
 	}
 
 	.nav-list {
