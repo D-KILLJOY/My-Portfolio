@@ -550,6 +550,7 @@ footer a:hover {
 	.nav-menu {
 		position: relative;
 		transition: unset;
+		z-index: 10;
 	}
 
 	.theme-toggle-con {
