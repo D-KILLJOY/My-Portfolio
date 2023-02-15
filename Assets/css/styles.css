@@ -369,28 +369,32 @@ main {
 	background-color: var(--background-color);
 	text-align: left;
 	position: relative;
-	transition: background-color 1s;
+	transition: background-color 0.3s;
+	border-radius: 2rem;
 }
 
 .project-tile h2 {
 	font-size: 2.5rem;
-	padding: 0 0 0 1rem;
+	padding: 1rem;
 	color: var(--secondary-color);
 	background-color: var(--svg-bg);
 	transition: background-color 1s;
+	font-weight: 800;
+	border-radius: 1rem;
 }
 
 .project-tile p {
 	font-size: 1.5rem;
-	font-weight: 400;
+	font-weight: 800;
 	color: var(--secondary-color);
-	margin: 3rem 0 2rem;
+	margin: 2rem 0 2rem;
+	padding: 1rem;
 }
 
 .project-tile .stack {
 	font-size: 1.2rem;
 	font-style: italic;
-	font-weight: 300;
+	font-weight: 800;
 	margin: 1rem auto 0;
 }
 
@@ -404,12 +408,26 @@ main {
 	margin: 0 2rem 1rem 0;
 }
 
+.project-tile:hover .link-con a {
+	color: var(--primary-one);
+}
+
+.project-tile:hover {
+	background-color: var(--footer-background-color);
+	color: var(--background-color);
+	transition: background-color 0.3s;
+}
+
+.project-tile:hover p {
+	color: var(--background-color);
+}
+
 .link-con a {
 	color: var(--secondary-color);
 }
 
-.link-con a:hover {
-	color: green;
+.project-tile:hover .link-con a:hover {
+	color: var(--color-one);
 }
 
 .more-projects {
