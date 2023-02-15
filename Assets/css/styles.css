@@ -361,7 +361,7 @@ main {
 
 .project-tile {
 	width: 30rem;
-	height: 25rem;
+	height: 30rem;
 	border: 3px solid var(--secondary-color);
 	margin: 2rem auto;
 	padding: 2rem 1rem 3rem;
