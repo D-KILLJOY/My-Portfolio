@@ -286,6 +286,7 @@ main {
 	font-weight: 700;
 	margin: 0 0 2rem 1rem;
 	position: relative;
+	border-radius: 0.5rem;
 }
 
 .socials a {
@@ -439,6 +440,7 @@ main {
 	padding: 1rem;
 	margin: 2rem auto;
 	text-align: center;
+	border-radius: 0.5rem;
 }
 
 /* ! END OF SPROJECTS SECTION */
@@ -478,6 +480,7 @@ main {
 	border: 3px solid var(--primary-color);
 	color: var(--primary-color);
 	padding: 1rem;
+	border-radius: 0.5rem;
 }
 
 /* ! END OF CONTACT SECTION */
@@ -633,6 +636,7 @@ footer a:hover {
 	.hire {
 		border: 3px solid var(--secondary-color);
 		padding: 0.5rem 1rem;
+		border-radius: 1rem;
 	}
 
 	/* !! END  OF  HEADER */
@@ -818,7 +822,6 @@ footer a:hover {
 
 	.nav-link:hover {
 		color: var(--color-one);
-		text-decoration: underline;
 	}
 
 	.hire {
@@ -872,6 +875,7 @@ footer a:hover {
 		border: 3px solid var(--primary-color);
 		border-right: none;
 		border-bottom: none;
+		border-radius: 0.5rem 0 0 0;
 	}
 	.desk-only::after {
 		bottom: -0.8rem;
@@ -879,14 +883,23 @@ footer a:hover {
 		border: 3px solid var(--primary-color);
 		border-left: none;
 		border-top: none;
+		border-radius: 0 0 0.5rem 0;
 	}
 
 	.desk-only:hover::after,
 	.desk-only:hover::before,
 	.desk-only:focus::after,
 	.desk-only:focus::before {
-		width: calc(100% + 1.35rem);
-		height: calc(100% + 1.35rem);
+		width: calc(100% + 1.3rem);
+		height: calc(100% + 1.3rem);
+	}
+
+	.desk-only:hover::after {
+		border-radius: 0 0.5rem 0.5rem 0.5rem;
+	}
+
+	.desk-only:hover::before {
+		border-radius: 0.5rem 0.5rem 0 0.5rem;
 	}
 
 	.direction {
