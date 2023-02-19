@@ -247,10 +247,11 @@ main {
 	padding: 14rem 1rem 4rem;
 	max-width: 120rem;
 	margin: 0 auto;
+	overflow-x: hidden;
 }
 
 .no-scroll {
-	overflow: hidden;
+	overflow-y: hidden;
 }
 
 .greeting {
@@ -316,10 +317,6 @@ main {
 	font-size: 1.3rem;
 	text-align: center;
 	margin-bottom: 2rem;
-}
-
-.sm-hidden {
-	display: none;
 }
 
 /*! ABOUT SECTION*/
@@ -445,6 +442,31 @@ main {
 
 /* ! END OF SPROJECTS SECTION */
 
+/* ! ANIMATION */
+
+.reveal-right {
+	position: relative;
+	transform: translateX(15rem);
+	opacity: 0;
+	transition: 1s all ease;
+}
+
+.reveal-left {
+	position: relative;
+	transform: translateX(-15rem);
+	opacity: 0;
+	transition: 1s all ease;
+}
+
+.reveal-left.active,
+.reveal-right.active {
+	transform: translateX(0);
+	opacity: 1;
+	display: block;
+}
+
+/* ! ANIMATION */
+
 /* ! CONTACT SECTION */
 .contact-con {
 	width: 30rem;
@@ -480,7 +502,7 @@ main {
 	border: 3px solid var(--primary-color);
 	color: var(--primary-color);
 	padding: 1rem;
-	border-radius: 0.5rem;
+	border-radius: g0.5rem;
 }
 
 /* ! END OF CONTACT SECTION */
@@ -531,6 +553,10 @@ footer a:hover {
 	text-decoration: underline;
 }
 /* ! END OF FOOTER SECTION */
+
+.hero .sm-hidden {
+	display: none;
+}
 
 @media screen and (min-width: 720px) {
 	/* !!  HEADER */
@@ -665,7 +691,7 @@ footer a:hover {
 		padding: 1rem 2rem;
 	}
 
-	.sm-hidden {
+	.hero .sm-hidden {
 		display: block;
 		width: auto;
 		height: 20rem;
@@ -699,6 +725,31 @@ footer a:hover {
 		font-size: 1.7rem;
 	}
 
+	/* ! ANIMATION */
+
+	.reveal-right-tw {
+		position: relative;
+		transform: translateX(15rem);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.reveal-left-tw {
+		position: relative;
+		transform: translateX(-15rem);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.reveal-left-tw.active,
+	.reveal-right-tw.active {
+		transform: translateX(0);
+		opacity: 1;
+		display: block;
+	}
+
+	/* ! ANIMATION */
+
 	/*! ABOUT SECTION*/
 	.flex {
 		max-width: 85rem;
@@ -709,6 +760,7 @@ footer a:hover {
 	.my-image {
 		width: 32rem;
 		margin: 0;
+		margin-top: -2rem;
 	}
 
 	.about p {
@@ -806,7 +858,7 @@ footer a:hover {
 	}
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 990px) {
 	.logo {
 		font-size: 4rem;
 	}
@@ -963,5 +1015,29 @@ footer a:hover {
 		margin-bottom: 0;
 	}
 }
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1280px) {
+	/* ! ANIMATION */
+
+	.reveal-right-tr {
+		position: relative;
+		transform: translateX(15rem);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.reveal-left-tr {
+		position: relative;
+		transform: translateX(-15rem);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.reveal-left-tr.active,
+	.reveal-right-tr.active {
+		transform: translateX(0);
+		opacity: 1;
+		display: block;
+	}
+
+	/* ! ANIMATION */
 }

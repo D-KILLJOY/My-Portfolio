@@ -19,34 +19,31 @@ navItem.forEach((i) => {
 		navBtn.classList.toggle("nav-btn-active");
 		navMenu.classList.toggle("nav-menu-active");
 
-		body.classList.remove("no-scroll")
+		body.classList.remove("no-scroll");
 	});
 });
 
-//  OPEN NAV MENU FOR MOBILE DISPLAY
+//!  OPEN NAV MENU FOR MOBILE DISPLAY
 
 navCon.addEventListener("click", () => {
 	navBtn.classList.toggle("nav-btn-active");
 	navMenu.classList.toggle("nav-menu-active");
 
-	body.classList.toggle("no-scroll")
-
+	body.classList.toggle("no-scroll");
 });
 
-
-// SCROLL LOCK 
+// ! SCROLL LOCK
 
 document.addEventListener("click", (e) => {
 	if (e.target.classList.contains("nv")) {
 		navMenu.classList.remove("nav-menu-active");
-			navBtn.classList.remove("nav-btn-active");
+		navBtn.classList.remove("nav-btn-active");
 
 		body.classList.remove("no-scroll");
-
 	}
 });
 
-// THEME TOGGLE
+// ! THEME TOGGLE
 function themeChange() {
 	let darkTheme = body.classList.contains(selectedTheme);
 	if (darkTheme) {
@@ -62,3 +59,148 @@ function themeChange() {
 }
 
 theme.addEventListener("click", themeChange);
+
+// ! ANIMATION
+
+function revealL() {
+	let revealsLeft = document.querySelectorAll(".reveal-left");
+
+	for (let i = 0; i < revealsLeft.length; i++) {
+		let windowHeight = window.innerHeight;
+		let elementTop = revealsLeft[i].getBoundingClientRect().top;
+		let elementVisible = 0;
+
+		if (elementTop < windowHeight - elementVisible) {
+			revealsLeft[i].classList.add("active");
+		} else {
+			revealsLeft[i].classList.remove("active");
+		}
+	}
+}
+
+function revealR() {
+	let revealsRight = document.querySelectorAll(".reveal-right");
+
+	for (let i = 0; i < revealsRight.length; i++) {
+		let windowHeight = window.innerHeight;
+		let elementTop = revealsRight[i].getBoundingClientRect().top;
+		let elementVisible = 0;
+
+		if (elementTop < windowHeight - elementVisible) {
+			revealsRight[i].classList.add("active");
+		} else {
+			revealsRight[i].classList.remove("active");
+		}
+	}
+}
+
+window.addEventListener("scroll", revealL);
+window.addEventListener("scroll", revealR);
+
+revealR();
+revealL();
+
+// ! 720 PX
+
+function revealTwL() {
+	let revealsLeft = document.querySelectorAll(".reveal-left-tw");
+
+	for (let i = 0; i < revealsLeft.length; i++) {
+		let windowHeight = window.innerHeight;
+		let elementTop = revealsLeft[i].getBoundingClientRect().top;
+		let elementVisible = 0;
+
+		if (elementTop < windowHeight - elementVisible) {
+			revealsLeft[i].classList.add("active");
+		} else {
+			revealsLeft[i].classList.remove("active");
+		}
+	}
+}
+
+function revealTwR() {
+	let revealsRight = document.querySelectorAll(".reveal-right-tw");
+
+	for (let i = 0; i < revealsRight.length; i++) {
+		let windowHeight = window.innerHeight;
+		let elementTop = revealsRight[i].getBoundingClientRect().top;
+		let elementVisible = 0;
+
+		if (elementTop < windowHeight - elementVisible) {
+			revealsRight[i].classList.add("active");
+		} else {
+			revealsRight[i].classList.remove("active");
+		}
+	}
+}
+
+window.addEventListener("scroll", revealTwL);
+window.addEventListener("scroll", revealTwR);
+
+revealTwR();
+revealTwL();
+
+// ! 1200 PX
+
+function revealTrL() {
+	let revealsLeft = document.querySelectorAll(".reveal-left-tr");
+
+	for (let i = 0; i < revealsLeft.length; i++) {
+		let windowHeight = window.innerHeight;
+		let elementTop = revealsLeft[i].getBoundingClientRect().top;
+		let elementVisible = 0;
+
+		if (elementTop < windowHeight - elementVisible) {
+			revealsLeft[i].classList.add("active");
+		} else {
+			revealsLeft[i].classList.remove("active");
+		}
+	}
+}
+
+function revealTrR() {
+	let revealsRight = document.querySelectorAll(".reveal-right-tr");
+
+	for (let i = 0; i < revealsRight.length; i++) {
+		let windowHeight = window.innerHeight;
+		let elementTop = revealsRight[i].getBoundingClientRect().top;
+		let elementVisible = 0;
+
+		if (elementTop < windowHeight - elementVisible) {
+			revealsRight[i].classList.add("active");
+		} else {
+			revealsRight[i].classList.remove("active");
+		}
+	}
+}
+
+window.addEventListener("scroll", revealTrL);
+window.addEventListener("scroll", revealTrR);
+
+revealTrR();
+revealTrL();
+
+// * CHANGING ANIMATION
+
+window.addEventListener("scroll", function () {
+	const projectTile = document.querySelectorAll(".project-tile");
+
+	if (window.innerWidth > 710) {
+		for (let i = 0; i < projectTile.length; i++) {
+			if (projectTile[i].classList.contains("reveal-left")) {
+				projectTile[i].classList.remove("reveal-left");
+			} else if (projectTile[i].classList.contains("reveal-right")) {
+				projectTile[i].classList.remove("reveal-right");
+			}
+		}
+	}
+	if (window.innerWidth > 1200) {
+		for (let i = 0; i < projectTile.length; i++) {
+			if (projectTile[i].classList.contains("reveal-left-tw")) {
+				projectTile[i].classList.remove("reveal-left-tw");
+			} else if (projectTile[i].classList.contains("reveal-right-tw")) {
+				projectTile[i].classList.remove("reveal-right-tw");
+			}
+		}
+	}
+});
