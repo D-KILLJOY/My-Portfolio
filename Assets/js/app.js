@@ -96,6 +96,8 @@ function revealR() {
 
 window.addEventListener("scroll", revealL);
 window.addEventListener("scroll", revealR);
+window.addEventListener("load", revealL);
+window.addEventListener("load", revealR);
 
 revealR();
 revealL();
@@ -136,6 +138,8 @@ function revealTwR() {
 
 window.addEventListener("scroll", revealTwL);
 window.addEventListener("scroll", revealTwR);
+window.addEventListener("load", revealTwL);
+window.addEventListener("load", revealTwR);
 
 revealTwR();
 revealTwL();
@@ -176,6 +180,8 @@ function revealTrR() {
 
 window.addEventListener("scroll", revealTrL);
 window.addEventListener("scroll", revealTrR);
+window.addEventListener("load", revealTrL);
+window.addEventListener("load", revealTrR);
 
 revealTrR();
 revealTrL();
