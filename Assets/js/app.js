@@ -210,3 +210,12 @@ window.addEventListener("scroll", function () {
 		}
 	}
 });
+
+// ! DISPLAY SKILL ATTR
+
+const imageContainer = document.querySelectorAll(".skill-img-con");
+
+imageContainer.forEach((e) => {
+	const image = e.querySelector(".skill-img");
+	e.setAttribute("desc", image.getAttribute("alt"));
+});
