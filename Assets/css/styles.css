@@ -1017,6 +1017,10 @@ footer a:hover {
 		margin: 6rem auto 1rem;
 	}
 
+	.skill-img-con {
+		transition: 0.5s;
+	}
+
 	.skills img {
 		width: 12rem;
 		filter: grayscale(100%);
@@ -1024,6 +1028,11 @@ footer a:hover {
 
 	.skill-img-con:hover img {
 		filter: none;
+	}
+
+	.skill-img-con:hover {
+		transform: translateY(-1rem);
+		transition: 0.3s;
 	}
 
 	.skill-img-con {
