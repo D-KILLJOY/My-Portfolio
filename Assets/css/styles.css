@@ -83,16 +83,16 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 2rem 1rem;
+	padding: 1rem 1rem;
 	position: relative;
 	background-color: var(--background-color);
 	transition: background-color 1s;
 }
 
 .logo {
-	font-size: 2rem;
-	font-weight: 900;
-	color: var(--primary-color);
+	width: 10rem;
+	object-fit: cover;
+	object-position: center;
 }
 
 .navigations {
@@ -596,10 +596,6 @@ footer a:hover {
 		transition: background-color 1s;
 	}
 
-	.logo {
-		font-size: 3rem;
-	}
-
 	.navigations {
 		position: relative;
 		width: 45rem;
@@ -892,7 +888,7 @@ footer a:hover {
 
 @media screen and (min-width: 990px) {
 	.logo {
-		font-size: 4rem;
+		width: 14rem;
 	}
 
 	.navigations {

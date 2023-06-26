@@ -6,12 +6,18 @@ const lightTheme = document.querySelector(".sun");
 const darkTheme = document.querySelector(".moon");
 const navMenu = document.querySelector(".nav-menu");
 const navItem = document.querySelectorAll(".nav-link");
+const logo = document.querySelector(".logo");
 
 let selectedTheme = localStorage.getItem("themeSelection");
+let selectedLogo = localStorage.getItem("logoType");
 
 if (selectedTheme) {
 	body.classList.add("dark");
 	lightTheme.style.zIndex = "10";
+}
+
+if (selectedLogo) {
+	logo.setAttribute("src", "./Assets/images/Didia-Uchenna-logo-white.png");
 }
 
 navItem.forEach((i) => {
@@ -49,12 +55,19 @@ function themeChange() {
 	if (darkTheme) {
 		body.classList.remove("dark");
 		localStorage.removeItem("themeSelection");
+		localStorage.removeItem("logoType");
 		lightTheme.style.zIndex = "-10";
+		logo.setAttribute("src", "./Assets/images/Didia-Uchenna-logo.png");
 	} else {
 		selectedTheme = "dark";
 		body.classList.add(selectedTheme);
 		lightTheme.style.zIndex = "10";
 		localStorage.setItem("themeSelection", "dark");
+		localStorage.setItem(
+			"logoType",
+			"./Assets/images/Didia-Uchenna-logo-white.png"
+		);
+		logo.setAttribute("src", "./Assets/images/Didia-Uchenna-logo-white.png");
 	}
 }
 
