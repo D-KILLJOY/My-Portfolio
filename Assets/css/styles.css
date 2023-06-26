@@ -64,6 +64,12 @@ body {
 	padding: 4rem 0 1rem;
 }
 
+.shadow {
+	box-shadow: 0px 2px 20px -10px var(--footer-background-color);
+	-webkit-box-shadow: 0px 2px 20px -10px var(--footer-background-color);
+	-moz-box-shadow: 0px 2px 20px -10px var(--footer-background-color);
+}
+
 /* !!  HEADER */
 
 .main-header {
@@ -501,17 +507,18 @@ main {
 }
 
 .text p {
-	text-align: center;
+	text-align: justify;
 	font-size: 1.5rem;
 	color: var(--secondary-color);
 	margin: 0 auto 2rem;
 	padding: 1rem;
 }
 
-.heavy {
+.text .heavy {
 	display: inline-block;
+	text-align: center;
 	font-weight: 700;
-	margin: 0 0 2rem 0;
+	margin: 0;
 }
 
 .text a {
@@ -845,20 +852,18 @@ footer a:hover {
 
 	.text {
 		display: flex;
-		padding: 4rem 0;
 		flex-direction: column;
 	}
 
 	.text p {
 		font-size: 1.8rem;
 		padding: 0;
-		width: 30rem;
+		width: 45rem;
 	}
 
-	.heavy {
-		display: inline-block;
+	.text .heavy {
 		font-weight: 700;
-		margin: 0 auto 3rem;
+		margin: 0 auto 2rem;
 	}
 
 	.text a {
@@ -1119,15 +1124,13 @@ footer a:hover {
 
 	.text p {
 		font-size: 2.1rem;
-		width: 40rem;
+		width: 60rem;
 		font-weight: 500;
 		line-height: 1.4;
 	}
 
 	.heavy {
-		font-size: 2.5rem;
-		display: inline-block;
-		font-weight: 900;
+		font-size: 2.2rem;
 	}
 
 	.text a {

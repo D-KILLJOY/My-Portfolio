@@ -38,7 +38,24 @@ navCon.addEventListener("click", () => {
 	body.classList.toggle("no-scroll");
 });
 
-// ! SCROLL LOCK
+// ! SCROLL SHADOW
+const scrollChecker = document.createElement("div");
+const header = document.querySelector(".main-header");
+
+scrollChecker.setAttribute("data-scroll-watcher", "");
+header.before(scrollChecker);
+
+const Observer = new IntersectionObserver(
+	(entries) => {
+		console.log(entries.interc);
+		header.classList.toggle("shadow", !entries[0].isIntersecting);
+	},
+	{ rootMargin: "200px 0px 0px 0px " }
+);
+
+Observer.observe(scrollChecker);
+
+// ! SCROLL LOCK ON MOBILE NAV DISPLAY
 
 document.addEventListener("click", (e) => {
 	if (e.target.classList.contains("nv")) {
