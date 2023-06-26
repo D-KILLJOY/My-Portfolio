@@ -96,7 +96,7 @@ body {
 }
 
 .logo {
-	width: 10rem;
+	width: 8rem;
 	object-fit: cover;
 	object-position: center;
 }
@@ -250,7 +250,7 @@ body {
 
 /* !! END  OF  HEADER */
 main {
-	padding: 14rem 1rem 4rem;
+	padding: 12rem 1rem 4rem;
 	max-width: 120rem;
 	margin: 0 auto;
 	overflow-x: hidden;
@@ -277,6 +277,7 @@ main {
 	color: var(--secondary-color);
 	margin: 0 0 2.5rem;
 	font-weight: 400;
+	line-height: 1.5;
 }
 
 .bold {
@@ -344,6 +345,7 @@ main {
 	color: var(--secondary-color);
 	padding: 0 1rem;
 	margin-bottom: 2rem;
+	text-align: justify;
 }
 
 /*! END OF ABOUT SECTION*/
@@ -499,6 +501,7 @@ main {
 	width: 30rem;
 	margin: 0 auto;
 	padding: 1rem;
+	line-height: 1.5;
 }
 
 .text {
@@ -882,7 +885,7 @@ footer a:hover {
 		justify-content: space-between;
 		align-items: center;
 		flex-direction: row-reverse;
-		padding: 2rem 5rem 2rem 3rem;
+		padding: 0 5rem 0 3rem;
 	}
 
 	.footer-socials {
@@ -893,7 +896,7 @@ footer a:hover {
 
 @media screen and (min-width: 990px) {
 	.logo {
-		width: 14rem;
+		width: 12rem;
 	}
 
 	.navigations {
